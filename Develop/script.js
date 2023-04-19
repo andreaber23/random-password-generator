@@ -14,6 +14,29 @@ function writePassword() {
 
   passwordText.value = password;
 
+
+  function generatePassword() {
+    var passwordCreated = ""
+        for (var i=0; i< passwordsLength; i++) {
+       var randomPassword = Math.floor(Math.random() * randomCharacters.length);
+       passwordCreated = passwordCreated + randomCharacters[randomPassword];
+        }
+    return passwordCreated;
+  }
+
+  function passwordCriteria() {
+    passwordsLength= +prompt("How many characters would you like your password to have?");
+  if (passwordsLength<8 || passwordsLength>128 || passwordsLength===" ") {
+      alert("Re-enter valid entry. It has to be between 8 and 128 characters long");
+      return false
+  
+  
+  }
+
+
+
+
+
 }
 
 // Add event listener to generate button
