@@ -1,29 +1,11 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-
-
-
-  // 1. Presented with password criteria
-  //  a.length of password 8<128
-  //  b.confirm if lower case or not
-  //  c.confirm if upper or lower case
-  //  d. numeric characters or not
-  //  e. special characters or no
-  // 2. Validate input and at least 1 character type included
-  // 3. Generate password based on criteria
-  // 4. Password is displayed 
-
-
-
-  
-
-
-
-
-
-
-  
-
+var passwordsLength = 8;
+var randomCharacters= [];
+var lowerCase=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+var upperCase=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+var numbers=["1","2","3","4","5","6","7","8","9","0"];
+var specialCharacters=["!","@","#","$","%","&","*","(",")","+","[","]"];
 
 // Write password to the #password input
 function writePassword() {
@@ -31,10 +13,8 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
+
 }
-
-
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
